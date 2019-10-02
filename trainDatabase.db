@@ -1,12 +1,12 @@
-create TABLE Trains (
+create TABLE IF NOT EXISTS Trains (
   trainID INTEGER PRIMARY KEY,
-  line TEXT
+  line TEXT,
 );
 
 INSERT INTO Trains VALUES (1, "A");
 INSERT INTO Trains VALUES (2, "B");
 INSERT INTO Trains VALUES (3, "C");
 INSERT INTO Trains VALUES (4, "D");
-INSERT INTO Trains VALUES (5, "E");
+INSERT INTO Trains VALUES (5, null);
 
 SELECT * FROM Trains ORDER BY trainID;
